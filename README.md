@@ -4,6 +4,8 @@
 
 ```
 npm start
+
+open browser, go to http://localhost:3000
 ```
 
 ## TODOs
