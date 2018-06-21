@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiKey = "AIzaSyBS1Hyw92G9KpykiozabPIcwKCghgUTiEQ";
+const apiKey = "---";
 const engine = "008587737443443656257:cxb2mx5rfv4"
 
 const assetService = store => next => action => {
