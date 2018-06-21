@@ -1,23 +1,14 @@
-const todos = (state=[], action) => {
+const asset = (state = [], action) => {
     switch (action.type) {
-        case 'ADD_TODO':
-            return [...state, action.todo];
-        case 'TOGGLE_TODO':
-            return [
-                ...state.slice(0, action.id),
-                { ...state[action.id], done: Boolean(!state[action.id].done) },
-                ...state.slice(action.id + 1, state.length)
-            ];
-        case 'DELETE_TODO':
-            return [
-                ...state.slice(0, action.id),
-                ...state.slice(action.id + 1, state.length)
-            ];
-        default:
+        case 'GET_STATUS_RECEIVED':
+            return { status: action.data };
+        case 'QUERY_RECEIVED':
+            return { status: action.data };
+    default:
             return state;
     }
 };
 
-const rootReducer = todos;
+const rootReducer = asset;
 
 export default rootReducer;

@@ -1,20 +1,6 @@
-export function toggleTodo(id) {
+export function requestAsset(queryString) {
     return {
-        type: 'TOGGLE_TODO',
-        id
-    }
-}
-
-export function deleteTodo(id) {
-    return {
-        type: 'DELETE_TODO',
-        id
-    }
-}
-
-export function addTodo(todo) {
-    return {
-        type: 'ADD_TODO',
-        todo
+        type: 'START_QUERY',
+        queryString
     }
 }

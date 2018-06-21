@@ -1,21 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { toggleTodo, deleteTodo, addTodo } from '../actions';
-import Todos from '../components/Todos';
+import { requestAsset } from '../actions';
+import Query from '../components/Query';
 
 const mapStateToProps = (state) => {
     return {
-        todos: state
+        queryResult: state
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onTodoClick: (id) => dispatch(toggleTodo(id)),
-        onDeleteClick: (id) => dispatch(deleteTodo(id)),
-        onAddClick: (todo) => dispatch(addTodo(todo))
+        onQueryClick: (data) => dispatch(requestAsset(data.queryString))
     }
 }
 
-export default connect( mapStateToProps, mapDispatchToProps)(Todos);
+export default connect( mapStateToProps, mapDispatchToProps)(Query);
