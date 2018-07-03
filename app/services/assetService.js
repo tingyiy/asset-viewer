@@ -40,7 +40,7 @@ const assetService = store => next => action => {
                     params: {
                         key: apiKey,
                         cx: engine,
-                        q: 'test'
+                        q: action.queryString,
                     }
                 })
                 .then(res => {
